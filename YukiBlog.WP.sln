@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "YukiBlog.WP", "YukiBlog.WP\YukiBlog.WP.fsproj", "{500C7B1F-C17C-4514-BE89-8A892B8A5ED4}"
+EndProject
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "YukiBlog.WP.Themes", "YukiBlog.WP.Themes\YukiBlog.WP.Themes.msbuildproj", "{ABBEBC1A-E6D5-4BFB-9531-1406E67B47D2}"
+EndProject
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "YukiBlog.WP.Plugins", "YukiBlog.WP.Plugins\YukiBlog.WP.Plugins.msbuildproj", "{5A79379C-D3A9-4299-A41A-EC627339D44B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{500C7B1F-C17C-4514-BE89-8A892B8A5ED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{500C7B1F-C17C-4514-BE89-8A892B8A5ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{500C7B1F-C17C-4514-BE89-8A892B8A5ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{500C7B1F-C17C-4514-BE89-8A892B8A5ED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABBEBC1A-E6D5-4BFB-9531-1406E67B47D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABBEBC1A-E6D5-4BFB-9531-1406E67B47D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABBEBC1A-E6D5-4BFB-9531-1406E67B47D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABBEBC1A-E6D5-4BFB-9531-1406E67B47D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A79379C-D3A9-4299-A41A-EC627339D44B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A79379C-D3A9-4299-A41A-EC627339D44B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A79379C-D3A9-4299-A41A-EC627339D44B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A79379C-D3A9-4299-A41A-EC627339D44B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02E9ADC7-2B10-4D28-8E9E-69C83132C749}
+	EndGlobalSection
+EndGlobal

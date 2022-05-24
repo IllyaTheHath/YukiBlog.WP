@@ -1,0 +1,10 @@
+<Project Sdk="Peachpied.WordPress.Build.Plugin">
+  <PropertyGroup>
+    <WpContentTarget>
+    </WpContentTarget>
+    <PhpRelativePath>wp-content/</PhpRelativePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YukiBlog.WP.Plugins\YukiBlog.WP.Plugins.msbuildproj" />
+  </ItemGroup>
+</Project>

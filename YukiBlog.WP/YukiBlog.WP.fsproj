@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <UserSecretsId>67a87507-f753-4e8e-bbb0-ff3dac4f802d</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Views\DashboardInfoView.html" />
+    <Compile Include="Plugins\DashboardInfo.fs" />
+    <Compile Include="Plugins\PluginProvider.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Giraffe.ViewEngine" Version="1.4.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.15.1" />
+    <PackageReference Include="PeachPied.WordPress.AspNetCore" Version="5.9.3-rc-003" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\YukiBlog.WP.Themes\YukiBlog.WP.Themes.msbuildproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="6.0.4" />
+  </ItemGroup>
+
+</Project>

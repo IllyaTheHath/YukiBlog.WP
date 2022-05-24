@@ -1,0 +1,7 @@
+<Project Sdk="Peachpied.WordPress.Build.Plugin">
+  <PropertyGroup>
+    <WpContentTarget>
+    </WpContentTarget>
+    <PhpRelativePath>wp-content/</PhpRelativePath>
+  </PropertyGroup>
+</Project>
