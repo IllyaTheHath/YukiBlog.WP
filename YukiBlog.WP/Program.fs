@@ -5,23 +5,27 @@ open PeachPied.WordPress.AspNetCore
 open Plugins
 open Microsoft.Extensions.DependencyInjection
 
-let configDatabase (config:WordPressConfig) =
+let configEnvVariable (config:WordPressConfig) =
     let dbHost = Environment.GetEnvironmentVariable "dbHost"
     let dbName = Environment.GetEnvironmentVariable "dbName"
     let dbUser = Environment.GetEnvironmentVariable "dbUser"
     let dbPassword = Environment.GetEnvironmentVariable "dbPass"
+    let homeUrl =  Environment.GetEnvironmentVariable "homeUrl"
+    let siteUrl =  Environment.GetEnvironmentVariable "siteUrl"
 
-    config.DbHost <- dbHost
-    config.DbName <- dbName
-    config.DbUser <- dbUser
-    config.DbPassword <- dbPassword
+    if not <| String.IsNullOrEmpty dbHost then config.DbHost <- dbHost
+    if not <| String.IsNullOrEmpty dbName then config.DbName <- dbName
+    if not <| String.IsNullOrEmpty dbUser then config.DbUser <- dbUser
+    if not <| String.IsNullOrEmpty dbPassword then config.DbPassword <- dbPassword
+    if not <| String.IsNullOrEmpty homeUrl then config.HomeUrl <- homeUrl
+    if not <| String.IsNullOrEmpty siteUrl then config.SiteUrl <- siteUrl
 
 let configPlugins (config:WordPressConfig) =
     for plugin in PluginProvider.getPlugins() do
         config.PluginContainer.Add(plugin) |> ignore
 
 let configWordpress (config:WordPressConfig) =
-    configDatabase config
+    configEnvVariable config
     configPlugins config
 
 [<EntryPoint>]
@@ -38,6 +42,8 @@ let main args =
 
     app.UseSession()
        .UseWordPress()
+       .UseHttpsRedirection()
+       .UseHsts()
     |> ignore
     app.Run()
 
